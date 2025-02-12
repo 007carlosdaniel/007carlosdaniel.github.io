@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín 💕</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 24px;
+            color: red;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yes {
+            background-color: lightgreen;
+        }
+        #no {
+            background-color: lightcoral;
+            position: absolute;
+        }
+        #message {
+            font-size: 22px;
+            color: darkred;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>¿Puedo ser tu click 💕?</h1>
+        <div class="buttons">
+            <button id="yes" onclick="showMessage()">Sí</button>
+            <button id="no" onmouseover="moveNoButton()">No</button>
+        </div>
+        <p id="message">Sabía que dirías que sí, te quiero muuuuuucho 🐮🐢🌘🌔</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+
+        function moveNoButton() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            document.getElementById("no").style.left = x + "px";
+            document.getElementById("no").style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
